@@ -219,6 +219,7 @@ li {
     grid-template-columns: 1fr;
     max-width: 500px;
     padding: 0;
+    border-radius: 0;
   }
   .form-image {
     display: block;

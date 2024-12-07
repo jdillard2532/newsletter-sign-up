@@ -2,6 +2,7 @@ const form = document.querySelector("form");
 const input = document.querySelector("#email-input");
 const labelError = document.querySelector(".labelError");
 const successDiv = document.querySelector(".success");
+const submittedEmail = document.querySelector(".submittedEmail");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -10,6 +11,7 @@ form.addEventListener("submit", function (e) {
   if (inputValue.match(/^\S+@\S+\.\S+$/)) {
     form.classList.toggle("hidden");
     successDiv.classList.toggle("hidden");
+    submittedEmail.textContent = inputValue + ".";
   } else {
     input.classList.add("error");
     labelError.classList.toggle("hidden");
